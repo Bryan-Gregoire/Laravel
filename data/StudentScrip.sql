@@ -1,3 +1,13 @@
+BEGIN TRANSACTION;
+DROP TABLE IF EXISTS `STUDENTS`;
+
+CREATE TABLE STUDENTS
+(
+    id INTEGER PRIMARY KEY NOT NULL,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL
+);
+
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (53644,'Sutton', 'Ward');
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (57074,'Frederick', 'Luciano');
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (54603,'Hays', 'Mark');
@@ -33,7 +43,7 @@ INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (58665,'Sandoval', 'Hazel');
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (58391,'Cruz', 'Phyllis');
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (53689,'Holloway', 'Burt');
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (57664,'Briggs', 'Hester');
-INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (52628,'O'Brien', 'Teresa');
+INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (52628,'O''Brien', 'Teresa');
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (57255,'Blevins', 'Tom');
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (50849,'Bell', 'Bridgett');
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (57255,'Donaldson', 'Dwayne');
