@@ -1,9 +1,9 @@
 <?php
 namespace App\Http\Controllers;
  
-class StudentCtrt extends Controller{
+class StudentCtrl extends Controller{
 
     public function index(){
-        return View('home');
+        return view("home");
     }
 }

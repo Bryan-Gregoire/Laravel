@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\StudentCtrl; 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home',[StudentCtrl::class,'index']);
+Route::get('/home', [StudentCtrl::class,"index"]);
