@@ -1,27 +1,33 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Titles</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href=css/css.css>
-</head>
+@extends('canvas')
 
-<header>
-    <h1> Gestion de Projet - gestions des etudiants </h1>
-</header>
-<body>
-<table>
-<tr>
-    <th>Matricule</th>
-    <th>Nom</th>
-    <th>Prénom</th>
-</tr>
+@section('title', 'Acceuil')
+
+@section('header', 'Projet - Gestion des étudiants')
+
+@section('content')
+
+<h3>Liste des étudiants</h3>
+
+<table id="table">
+    <tr>
+        <th>Matricule</th>
+        <th>Nom </th>
+        <th>Prénom</th>
+        <th>Présent</th>
+    </tr>
+    @foreach($students as $student)
+    <tr>
+        <td>{{ $student->id }} </td>
+        <td>{{ $student->nom }} </td>
+        <td>{{ $student->prenom }}</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    @endforeach
 </table>
-</body>
-<footer>
-    <h1>Gestion de Projet</h1>
-</footer>
 
-</html>
+@endsection
+
+
+@section('foot')
+<p> Bryan grégoire - Jeremie Seshie</p>
+@endsection
