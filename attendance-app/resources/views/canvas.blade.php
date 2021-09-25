@@ -11,7 +11,10 @@
 </head>
 
 <header>
-    <h1> @yield('header') </h1>
+
+<h1> @yield('header') </h1>
+@yield('menu')
+
 </header>
 
 <body>

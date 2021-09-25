@@ -5,7 +5,8 @@ CREATE TABLE STUDENTS
 (
     id INTEGER PRIMARY KEY NOT NULL,
     nom VARCHAR(100) NOT NULL,
-    prenom VARCHAR(100) NOT NULL
+    prenom VARCHAR(100) NOT NULL,
+    present BOOLEAN NOT NULL DEFAULT false
 );
 
 INSERT INTO `STUDENTS` (id,nom,prenom) VALUES (50000,'Lucas', 'Opal');

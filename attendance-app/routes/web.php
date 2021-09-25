@@ -19,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', [StudentCtrl::class,"index"]);
+Route::get("/home", [StudentCtrl::class,"index"]);
+
+Route::get("/home/{id}", [StudentCtrl::class,"checkStudentPresent"]);
