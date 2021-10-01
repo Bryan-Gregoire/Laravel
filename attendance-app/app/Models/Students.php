@@ -11,7 +11,7 @@ class Students extends Model
 {
     public static function getAllStudents()
     {
-        $students = DB::select("SELECT students.id, students.nom, students.prenom, students.present FROM students");
+        $students = DB::select("SELECT students.id, students.nom, students.prenom, students.present FROM students ORDER BY students.id");
         return $students;
     }
 
