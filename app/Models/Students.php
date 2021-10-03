@@ -19,6 +19,5 @@ class Students extends Model
     {
         $presentStatus = DB::selectOne("SELECT present FROM students WHERE id = ?", [$idStudent]);
         DB::table("students")->where("id", $idStudent)->update(["present" => !$presentStatus->present]);
-        //DB::update("UPDATE students SET present = ? WHERE id = ?", [!$presentStatus->present, $idStudent]);
     }
 }
