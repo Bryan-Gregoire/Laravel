@@ -1,4 +1,5 @@
 BEGIN TRANSACTION;
+/**
 DROP TABLE IF EXISTS STUDENTS;
 
 CREATE TABLE STUDENTS
@@ -8,7 +9,7 @@ CREATE TABLE STUDENTS
     prenom VARCHAR(100) NOT NULL,
     present BOOLEAN NOT NULL DEFAULT false
 );
-
+*/
 INSERT INTO STUDENTS (id,nom,prenom) VALUES (50000,'Lucas', 'Opal');
 INSERT INTO STUDENTS (id,nom,prenom) VALUES (50001,'Vasquez', 'Max');
 INSERT INTO STUDENTS (id,nom,prenom) VALUES (50002,'Sharpe', 'Riley');

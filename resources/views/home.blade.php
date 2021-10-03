@@ -30,7 +30,7 @@
         <td>{{ $student->prenom }} </td>
         <td>{{ $student->nom }}</td>
         <td> <label for="box">
-                <input data-idPresent="{{ $student->id }}" type="checkbox" class="box" checked={{ $student->present }}>
+                <input data-idPresent="{{ $student->id }}" type="checkbox" class="box" {{ $student->present ? "checked" : ""  }}>
             </label></td>
     </tr>
     @endforeach
