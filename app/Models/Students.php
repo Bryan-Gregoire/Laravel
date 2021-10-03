@@ -18,7 +18,7 @@ class Students extends Model
     public static function updatePresentStudent($idStudent)
     {
         $presentStatus = DB::selectOne("SELECT present FROM students WHERE id = ?", [$idStudent]);
-
-        DB::update("UPDATE students SET present = ? WHERE id = ?", [!$presentStatus->present, $idStudent]);
+        DB::table("students")->where("id", $idStudent)->update(["present" => !$presentStatus->present]);
+        //DB::update("UPDATE students SET present = ? WHERE id = ?", [!$presentStatus->present, $idStudent]);
     }
 }
