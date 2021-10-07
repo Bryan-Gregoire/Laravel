@@ -41,15 +41,14 @@ th, td {
     text-align: center;
 }
 
-
-th {
+th, button {
     background-color: rgb(63, 123, 172);
     color: black;
     font-weight: bold;
     font-family: cursive;
 }
 
-td {
+td, button {
     background-color: cornflowerblue;
     color: darkblue;
     font-weight: bold;
@@ -57,9 +56,7 @@ td {
 
 table {
     text-align: center;
-    margin-top: 10px;
-    display: inline;
-    margin-right: 50px;
+    margin: 15px auto;
 }
 
 #thPrenom {
@@ -70,23 +67,16 @@ table {
     width: 100px;
 }
 
-h1 {
+h1, h3 {
   font-size: 48px;
   text-shadow: -1px -1px #9df, 1px 1px #49d, -3px 0 4px #000;
   font-family:"Segoe print", Arial, Helvetica, sans-serif;
   color:#6bf;
-  padding:24px 32px 32px 32px;
   font-weight:lighter;
   text-align:center;
-  display:inline;
-  line-height:150px;
 }
 
 h3 {
     font-size: 26px;
     text-shadow: -1px -1px rgb(66, 98, 114), 1px 1px #49d, -3px 0 4px #000;
-    font-family:"Segoe print", Arial, Helvetica, sans-serif;
-    color:#6bf; 
-    font-weight:lighter;
-    text-align:center;
 }

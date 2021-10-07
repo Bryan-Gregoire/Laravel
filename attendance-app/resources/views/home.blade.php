@@ -17,6 +17,13 @@
 
 <h3>Liste des étudiants</h3>
 
+<form action="api/home/student/add" method="post">
+    <input type="text" name="id" required placeholder="id">
+    <input type="text" name="nom" required placeholder="nom">
+    <input type="text" name="prenom" required placeholder="prenom">
+    <button>Ajouter</button>
+</form>
+
 <table id="table">
     <tr>
         <th>Matricule</th>
@@ -38,6 +45,7 @@
                 <input data-idPresent="{{ $student->id }}" type="checkbox" class="box" checked=true>
             </label></td>
         @endif
+        <td><button data-idStudent="{{ $student->id }}" onclick="deleteStudent(this)">Supprimer</button></td>
     </tr>
     @endforeach
 </table>
@@ -56,8 +64,17 @@
     });
 </script>
 
-@endsection
+<script>
+    function deleteStudent(element) {
+        console.log(element);
+        $.getJSON("api/home/student/" + $(element).attr('data-idStudent') + "/delete", () => {
+            const save = $(element).parent().parent();
+            save.remove();
+        });
+    }
+</script>
 
+@endsection
 
 @section('foot')
 <p> Bryan grégoire - Jeremie Seshie</p>
