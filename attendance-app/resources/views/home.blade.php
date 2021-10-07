@@ -19,8 +19,8 @@
 
 <form action="api/home/student/add" method="post">
     <input type="text" name="id" required placeholder="id">
-    <input type="text" name="nom" required placeholder="nom">
     <input type="text" name="prenom" required placeholder="prenom">
+    <input type="text" name="nom" required placeholder="nom">
     <button>Ajouter</button>
 </form>
 
