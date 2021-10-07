@@ -18,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/home/student/{id}/delete', [StudentCtrl::class, 'removeStudent']);
+
+Route::post('/home/student/add', [StudentCtrl::class, 'addStudent']);

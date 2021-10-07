@@ -22,4 +22,14 @@ class Students extends Model
 
         DB::update("UPDATE students SET present = ? WHERE id = ?", [$presentStatus, $idStudent]);
     }
+
+    public static function removeStudent($idStudent)
+    {
+        return DB::delete("DELETE FROM students WHERE id = ?", [$idStudent]);
+    }
+
+    public static function addStudent($id, $nom, $prenom)
+    {
+        return DB::table('students')->insert(['id' => $id, 'nom' => $nom, 'prenom' => $prenom, 'present' => 0]);
+    }
 }
