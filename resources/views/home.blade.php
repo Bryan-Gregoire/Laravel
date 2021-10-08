@@ -36,15 +36,9 @@
         <td>{{ $student->id }} </td>
         <td>{{ $student->prenom }} </td>
         <td>{{ $student->nom }}</td>
-        @if ( $student->present === 0)
         <td> <label for="box">
-                <input data-idPresent="{{ $student->id }}" type="checkbox" class="box">
+                <input data-idPresent="{{ $student->id }}" type="checkbox" class="box" {{ $student->present ? "checked" : ""  }}>
             </label></td>
-        @else
-        <td> <label for="box">
-                <input data-idPresent="{{ $student->id }}" type="checkbox" class="box" checked=true>
-            </label></td>
-        @endif
         <td><button data-idStudent="{{ $student->id }}" onclick="deleteStudent(this)">Supprimer</button></td>
     </tr>
     @endforeach
